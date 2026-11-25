@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Prachi Patil — Junior MERN Stack Developer portfolio">
+<title>Prachi Patil | Junior MERN Stack Developer</title>
+<style>
+:root{--bg:#080b14;--panel:#101625;--panel2:#141d30;--text:#f4f6ff;--muted:#a4aec4;--line:#26314a;--accent:#9c8cff;--cyan:#6de4d2;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 85% 5%,#28245a55,transparent 35%),radial-gradient(ellipse at 0% 55%,#164e4a22,transparent 35%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080b14dc;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:850;letter-spacing:.08em}.logo span{color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:25px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--text)}
+.nav-cta{border:1px solid var(--line);padding:9px 15px;border-radius:12px;color:var(--text)!important}
+.hero{min-height:690px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:48px;padding:78px 0 86px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:750}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan)}
+h1{font-size:clamp(3rem,7vw,5.7rem);line-height:1.02;letter-spacing:-.065em;margin:22px 0}
+.gradient{background:linear-gradient(100deg,#b6aaff 10%,#73e6d3 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:650px;color:var(--muted);font-size:1.12rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:13px;border:1px solid var(--line);font-weight:750;transition:transform .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:#8274df}.btn.primary{background:linear-gradient(110deg,#a89aff,#78e2d2);color:#10131e;border:0}
+.hero-card{position:relative;min-height:390px;border:1px solid #ffffff1b;border-radius:28px;background:linear-gradient(145deg,#171d35,#0e1524);padding:26px;overflow:hidden;box-shadow:0 30px 90px #0005}
+.hero-card:before{content:"";position:absolute;width:270px;height:270px;right:-90px;top:-100px;border-radius:50%;background:#9282ff2b;filter:blur(5px)}
+.card-top{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem}.orb{height:185px;display:grid;place-items:center;position:relative}
+.orb-ring{width:160px;height:160px;border:1px solid #8f85ff88;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 45px #9384ff24,inset 0 0 35px #9384ff13;position:relative}
+.orb-ring:before,.orb-ring:after{content:"";position:absolute;border:1px solid #6de4d266;border-radius:50%;inset:17px;transform:rotate(35deg) scaleX(1.5)}
+.orb-ring:after{transform:rotate(-45deg) scaleX(1.5);border-color:#a99cff66}
+.orb-core{font-size:2.7rem;font-weight:900;letter-spacing:-.1em;background:linear-gradient(135deg,#c3baff,#6de4d2);color:transparent;background-clip:text}
+.code-lines{display:grid;gap:8px;margin-top:5px}.code-line{height:7px;border-radius:9px;background:#ffffff12}.code-line:nth-child(1){width:82%}.code-line:nth-child(2){width:63%}.code-line:nth-child(3){width:73%}
+.stack-label{display:flex;justify-content:space-between;gap:10px;margin-top:20px;color:var(--muted);font-size:.8rem}
+section{padding:68px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:25px}
+.kicker{color:var(--accent);font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.12;letter-spacing:-.04em;margin:8px 0 0}
+.section-note{max-width:440px;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.panel{border:1px solid var(--line);background:linear-gradient(145deg,#121a2a,#0e1421);border-radius:20px;padding:26px}
+.panel p{color:var(--muted);margin:0}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini{padding:18px;border-radius:15px;background:#ffffff06;border:1px solid #ffffff0d}.mini strong{display:block;font-size:1.25rem;color:var(--cyan)}.mini span{font-size:.83rem;color:var(--muted)}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.project{position:relative;overflow:hidden;min-height:270px}.project:after{content:"";position:absolute;width:190px;height:190px;right:-70px;top:-75px;border-radius:50%;background:#8e7cff14;pointer-events:none}
+.project-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.project-icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#a99aff18;color:#c4baff;font-size:1.2rem}
+.project-type{color:var(--cyan);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:750}
+.project h3{font-size:1.35rem;margin:0 0 10px}.project p{color:var(--muted);margin:0 0 20px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:.78rem;color:#d7def2;border:1px solid #34405a;border-radius:999px;padding:5px 10px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill-group h3{font-size:1rem;margin:0 0 14px}.skill-list{display:flex;flex-wrap:wrap;gap:8px}
+.skill{padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:#ffffff04;color:#c6cfe3;font-size:.87rem}
+.contact-box{display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(120deg,#171a35,#102321);border:1px solid #ffffff1c;border-radius:24px;padding:34px}
+.contact-box p{color:var(--muted);max-width:590px;margin:12px 0 0}.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+footer{border-top:1px solid #ffffff12;padding:25px 0;color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{animation:rise .7s both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:800px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:65px}.hero-card{max-width:480px}.about-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.contact-box{align-items:flex-start;flex-direction:column}}
+@media(max-width:580px){.wrap{width:min(100% - 30px,var(--max))}nav{height:68px}.navlinks{gap:12px;font-size:.8rem}.navlinks a:not(.nav-cta){display:none}.hero{padding:60px 0}.project-grid,.skills-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.contact-box{padding:24px}.hero-card{min-height:340px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">PRACHI<span>.</span></a>
+<div class="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Contact ↗</a></div>
+</nav></div></header>
+<main>
+<div class="wrap">
+<section class="hero" id="home">
+<div class="reveal">
+<div class="eyebrow"><span class="dot"></span> Junior MERN Stack Developer</div>
+<h1>Hi, I’m Prachi.<br><span class="gradient">I build for the web.</span></h1>
+<p class="lead">A B.Tech graduate in Artificial Intelligence & Data Science, interested in creating thoughtful, responsive web applications and growing as a full-stack developer.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore projects <span>↘</span></a><a class="btn" href="mailto:prachipatil0623@gmail.com">Get in touch ↗</a></div>
+</div>
+<div class="hero-card reveal" aria-label="Decorative developer illustration">
+<div class="card-top"><span>PORTFOLIO / 2026</span><span>01 — 04</span></div>
+<div class="orb"><div class="orb-ring"><div class="orb-core">PP</div></div></div>
+<div class="code-lines"><div class="code-line"></div><div class="code-line"></div><div class="code-line"></div></div>
+<div class="stack-label"><span>Curious by nature</span><span>Building step by step ↗</span></div>
+</div>
+</section>
+
+<section id="about">
+<div class="section-head"><div><div class="kicker">A little about me</div><h2>Learning by building.</h2></div></div>
+<div class="about-grid">
+<div class="panel"><p>I’m a fresher focused on web development and the MERN stack. I enjoy turning ideas into clear, useful interfaces, learning how frontend and backend pieces work together, and improving through hands-on projects. I’m looking for a junior opportunity where I can contribute, collaborate, and keep learning.</p></div>
+<div class="mini-grid"><div class="mini"><strong>2026</strong><span>Graduate</span></div><div class="mini"><strong>MERN</strong><span>Career focus</span></div><div class="mini"><strong>AI & DS</strong><span>B.Tech degree</span></div><div class="mini"><strong>Curious</strong><span>Always learning</span></div></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects I’m exploring.</h2></div><p class="section-note">A snapshot of project work and concepts. Add verified live demos and exact implementation details before sharing.</p></div>
+<div class="project-grid">
+<article class="panel project"><div class="project-head"><div class="project-icon">✦</div><span class="project-type">Travel · AI concept</span></div><h3>TravelMate AI</h3><p>A travel-planning experience concept that brings destination ideas, stays, activities, budget planning, and itinerary organization into one flow.</p><div class="tags"><span class="tag">Travel planner</span><span class="tag">Frontend concept</span><span class="tag">Multi-agent idea</span></div></article>
+<article class="panel project"><div class="project-head"><div class="project-icon">⌘</div><span class="project-type">Web application</span></div><h3>Tours & Travel Management</h3><p>A travel management application project focused on organizing trip-related workflows, user access, and an administration experience.</p><div class="tags"><span class="tag">Web development</span><span class="tag">Travel domain</span><span class="tag">Full-stack learning</span></div></article>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-head"><div><div class="kicker">Tools & technologies</div><h2>My toolkit.</h2></div></div>
+<div class="skills-grid">
+<div class="panel skill-group"><h3>Frontend</h3><div class="skill-list"><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">React</span><span class="skill">Responsive UI</span></div></div>
+<div class="panel skill-group"><h3>Backend & data</h3><div class="skill-list"><span class="skill">Node.js</span><span class="skill">Express.js</span><span class="skill">MongoDB</span><span class="skill">REST API concepts</span></div></div>
+<div class="panel skill-group"><h3>Working style</h3><div class="skill-list"><span class="skill">Problem solving</span><span class="skill">Quick learner</span><span class="skill">Team collaboration</span><span class="skill">Continuous learning</span></div></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact-box"><div><div class="kicker">Have an opportunity?</div><h2>Let’s build something useful.</h2><p>I’m open to junior and fresher opportunities in web development. Feel free to reach out by email or connect with me on LinkedIn.</p></div>
+<div class="contact-links"><a class="btn primary" href="mailto:prachipatil0623@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/prachi-patil-6169852ba/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+</section>
+</div>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Prachi Patil</span><span>Designed with care · Built for the web</span></div></footer>
+</body>
+</html>
